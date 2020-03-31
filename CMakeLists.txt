@@ -8,8 +8,7 @@ add_definitions(${PCL_DEFINITIONS})
 
 include_directories(include/)
 
-add_library(principal_curvatures_can SHARED src/principle_curvatures_can.cpp)
-# target_link_libraries(principal_curvatures_can ${PCL_LIBRARIES})
+add_library(principal_curvatures_can SHARED src/principal_curvatures_can.cpp)
 
 add_executable(example example/example.cpp)
 target_link_libraries(example ${PCL_LIBRARIES} $<TARGET_FILE:principal_curvatures_can>)
